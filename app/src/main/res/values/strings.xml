@@ -1,0 +1,8 @@
+<resources>
+    <!-- App Strings -->
+    <string name="app_name">KWeatherApp</string>
+
+    <!-- MainActivity Strings -->
+    <string name="hello_world">Hello Kotlin!</string>
+
+</resources>
