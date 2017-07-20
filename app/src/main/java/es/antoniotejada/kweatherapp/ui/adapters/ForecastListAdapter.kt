@@ -1,4 +1,4 @@
-package es.antoniotejada.kweatherapp.adapters
+package es.antoniotejada.kweatherapp.ui.adapters
 
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
