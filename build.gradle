@@ -11,6 +11,7 @@ buildscript {
     ext.supportLibraryVersion = '25.3.1'
 
     ext.constraintLayout = '1.0.2'
+    ext.gsonVersion = '2.8.0'
 
     repositories {
         jcenter()
