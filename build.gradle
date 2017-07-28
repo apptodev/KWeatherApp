@@ -12,6 +12,7 @@ buildscript {
 
     ext.constraintLayout = '1.0.2'
     ext.gsonVersion = '2.8.0'
+    ext.picassoVersion = '2.5.2'
 
     repositories {
         jcenter()

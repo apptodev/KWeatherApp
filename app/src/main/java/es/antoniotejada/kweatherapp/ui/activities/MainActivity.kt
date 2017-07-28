@@ -7,11 +7,9 @@ import android.support.v7.widget.RecyclerView
 import es.antoniotejada.kweatherapp.R
 import es.antoniotejada.kweatherapp.data.ForecastRequest
 import es.antoniotejada.kweatherapp.domain.commands.RequestForecastCommand
+import es.antoniotejada.kweatherapp.domain.model.Forecast
 import es.antoniotejada.kweatherapp.ui.adapters.ForecastListAdapter
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.find
-import org.jetbrains.anko.longToast
-import org.jetbrains.anko.uiThread
+import org.jetbrains.anko.*
 
 /**
  * Created by apptodev on 6/7/17.
@@ -28,7 +26,11 @@ class MainActivity : AppCompatActivity() {
         doAsync {
             val result = RequestForecastCommand("94043").execute()
             uiThread {
-                forecastList.adapter = ForecastListAdapter(result)
+                forecastList.adapter = ForecastListAdapter(result, object : ForecastListAdapter.OnItemClickListener {
+                    override fun invoke(forecast: Forecast) {
+                        toast(forecast.date)
+                    }
+                })
             }
         }
     }

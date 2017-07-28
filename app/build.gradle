@@ -35,6 +35,7 @@ dependencies {
 
     compile "com.android.support.constraint:constraint-layout:$constraintLayout"
     compile "com.google.code.gson:gson:$gsonVersion"
+    compile "com.squareup.picasso:picasso:$picassoVersion"
 
 }
 repositories {
